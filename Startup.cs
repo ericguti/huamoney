@@ -23,8 +23,12 @@ namespace HuaMoney
         {
             services.AddControllersWithViews();
 
+            string db_host = Environment.GetEnvironmentVariable("DB_HOST");            
+            string db_user = Environment.GetEnvironmentVariable("DB_USER");            
+            string db_database = Environment.GetEnvironmentVariable("DB_DATABASE");            
+            string db_password = Environment.GetEnvironmentVariable("DB_PASSWORD");            
             // Replace with your connection string.
-            var connectionString = "server=localhost;user=root;password=root;database=Hualfim2";
+            var connectionString = $"server={db_host};user={db_user};password={db_password};database={db_database}";
 
             // Replace with your server version and type.
             // Use 'MariaDbServerVersion' for MariaDB.

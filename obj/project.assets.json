@@ -926,31 +926,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\yixin\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "/home/guti/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\yixin\\Desktop\\HuaMoney\\HuaMoney\\HuaMoney.csproj",
+      "projectUniqueName": "/home/guti/Documents/Development/huamoney/HuaMoney.csproj",
       "projectName": "HuaMoney",
-      "projectPath": "C:\\Users\\yixin\\Desktop\\HuaMoney\\HuaMoney\\HuaMoney.csproj",
-      "packagesPath": "C:\\Users\\yixin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\yixin\\Desktop\\HuaMoney\\HuaMoney\\obj\\",
+      "projectPath": "/home/guti/Documents/Development/huamoney/HuaMoney.csproj",
+      "packagesPath": "/home/guti/.nuget/packages/",
+      "outputPath": "/home/guti/Documents/Development/huamoney/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\yixin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/home/guti/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -1011,20 +1004,8 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.418/RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1603",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Pomelo.EntityFrameworkCore.MySql 6.0.2 depends on Microsoft.EntityFrameworkCore.Relational (>= 6.0.7 && < 7.0.0) but Microsoft.EntityFrameworkCore.Relational 6.0.7 was not found. An approximate best match of Microsoft.EntityFrameworkCore.Relational 6.0.9 was resolved.",
-      "libraryId": "Microsoft.EntityFrameworkCore.Relational",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    }
-  ]
+  }
 }
