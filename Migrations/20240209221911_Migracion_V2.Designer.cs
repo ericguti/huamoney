@@ -2,6 +2,7 @@
 using HuaMoney.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -9,9 +10,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HuaMoney.Migrations
 {
     [DbContext(typeof(HuaMoneyContext))]
-    partial class HuaMoneyContextModelSnapshot : ModelSnapshot
+    [Migration("20240209221911_Migracion_V2")]
+    partial class Migracion_V2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -2,7 +2,7 @@
 
 namespace HuaMoney.Models
 {
-    public class Bank
+    public class Transaction
     {
         [Key]
         public long Id { get; set; }
