@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "f8dWlxP4GT/nLTkKNxK8sKyCh+u0fpbFS0OagiQxxrwBSKUT9UNgpsMkYV2Wyzg/X/Jk6rI5loeWwEsuV4/JOA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\yixin\\Desktop\\HuaMoney\\HuaMoney\\HuaMoney.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\yixin\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.19.4\\microsoft.visualstudio.azure.containers.tools.targets.1.19.4.nupkg.sha512"
+  ],
+  "logs": []
+}
