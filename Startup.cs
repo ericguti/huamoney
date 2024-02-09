@@ -1,103 +1,76 @@
-﻿using Microsoft.AspNetCore.Authentication.Cookies;
+﻿using HuaMoney.Models;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Localization;
 using Microsoft.VisualBasic;
+
 
 namespace HuaMoney
 {
     public class Startup
     {
-        public IConfiguration _configuration { get; }
-
         public Startup(IConfiguration configuration)
         {
-            _configuration = configuration;
+            Configuration = configuration;
         }
+
+        public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
-        // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
-        //Service se configura el inyector de dependencias.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddControllersWithViews();
 
-            services.AddDbContext<ComplaintsPortalContext>(options =>
-                options.UseSqlServer(
-                    _configuration.GetConnectionString("ComplaintsPortalConnection")));
+            // Replace with your connection string.
+            var connectionString = "server=localhost;user=root;password=root;database=Hualfim2";
 
-            services.AddControllersWithViews(options => SetDataAnotationsGeneral(services, options))
-           .AddViewLocalization(opt => opt.ResourcesPath = "Resources")
-           .AddDataAnnotationsLocalization();
+            // Replace with your server version and type.
+            // Use 'MariaDbServerVersion' for MariaDB.
+            // Alternatively, use 'ServerVersion.AutoDetect(connectionString)'.
+            // For common usages, see pull request #1233.
+            var serverVersion = new MySqlServerVersion(new Version(8, 0, 34));
 
-            services.Configure<RouteOptions>(opt => opt.LowercaseUrls = false);
-            //Configuramos las dependencias.
-            //services.AddComplaintsPortalManagementWeb(_configuration);
-
-            services.AddDistributedMemoryCache();
-
-            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(options =>
-            {
-                options.Cookie.HttpOnly = true;
-                options.Cookie.Name = "AuthCPComplaintsWeb";
-                options.ExpireTimeSpan = TimeSpan.FromHours(48);
-                //options.LoginPath = "/account/login";
-                options.AccessDeniedPath = "/error/401";
-                options.SlidingExpiration = true;
-            });
+            // Replace 'YourDbContext' with the name of your own DbContext derived class.
+            services.AddDbContext<HuaMoneyContext>(
+                dbContextOptions => dbContextOptions
+                    .UseMySql(connectionString, serverVersion)
+                    // The following three options help with debugging, but should
+                    // be changed or removed for production.
+                    .LogTo(Console.WriteLine, LogLevel.Information)
+                    .EnableSensitiveDataLogging()
+                    .EnableDetailedErrors()
+            );
         }
 
-        //Middleware
+
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-
             if (env.IsDevelopment())
             {
-                app.UseExceptionHandler("/error/exception");
                 app.UseDeveloperExceptionPage();
             }
             else
             {
-                app.UseExceptionHandler("/error/exception");
+                app.UseExceptionHandler("/Home/Error");
+                app.UseHsts();
             }
 
-            app.UseStatusCodePagesWithReExecute("/error/{0}");
-
+            app.UseHttpsRedirection();
             app.UseStaticFiles();
 
             app.UseRouting();
 
-            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
-                   name: "default",
-                   pattern: "{controller=main}/{action=index}");
-
+                    name: "default",
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
             });
-        }
-
-        private void SetDataAnotationsGeneral(IServiceCollection services, MvcOptions options)
-        {
-            var F = services.BuildServiceProvider().GetService<IStringLocalizerFactory>();
-            var L = F.Create("ModelBindingMessages", "ComplaintsPortal.ComplaintsWeb");
-            options.ModelBindingMessageProvider.SetValueIsInvalidAccessor(
-                (x) => L["ValueIsInvalid"]);
-            options.ModelBindingMessageProvider.SetValueMustBeANumberAccessor(
-                (x) => L["ValueMustBeANumber", x]);
-            options.ModelBindingMessageProvider.SetMissingBindRequiredValueAccessor(
-                (x) => L["MissingBindRequiredValue", x]);
-            options.ModelBindingMessageProvider.SetAttemptedValueIsInvalidAccessor(
-                (x, y) => L["AttemptedValueIsInvalid", x, y]);
-            options.ModelBindingMessageProvider.SetMissingKeyOrValueAccessor(
-                () => L["MissingKeyOrValue"]);
-            options.ModelBindingMessageProvider.SetUnknownValueIsInvalidAccessor(
-                (x) => L["UnknownValueIsInvalid", x]);
-            options.ModelBindingMessageProvider.SetValueMustNotBeNullAccessor(
-                (x) => L["ValueMustNotBeNull", x]);
-
         }
     }
 }

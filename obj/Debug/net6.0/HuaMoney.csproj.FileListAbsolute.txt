@@ -28,3 +28,17 @@ C:\Users\yixin\Desktop\HuaMoney\HuaMoney\obj\Debug\net6.0\refint\HuaMoney.dll
 C:\Users\yixin\Desktop\HuaMoney\HuaMoney\obj\Debug\net6.0\HuaMoney.pdb
 C:\Users\yixin\Desktop\HuaMoney\HuaMoney\obj\Debug\net6.0\HuaMoney.genruntimeconfig.cache
 C:\Users\yixin\Desktop\HuaMoney\HuaMoney\obj\Debug\net6.0\ref\HuaMoney.dll
+C:\Users\yixin\Desktop\HuaMoney\HuaMoney\bin\Debug\net6.0\Humanizer.dll
+C:\Users\yixin\Desktop\HuaMoney\HuaMoney\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\yixin\Desktop\HuaMoney\HuaMoney\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\yixin\Desktop\HuaMoney\HuaMoney\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\yixin\Desktop\HuaMoney\HuaMoney\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\yixin\Desktop\HuaMoney\HuaMoney\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\yixin\Desktop\HuaMoney\HuaMoney\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\yixin\Desktop\HuaMoney\HuaMoney\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\yixin\Desktop\HuaMoney\HuaMoney\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\yixin\Desktop\HuaMoney\HuaMoney\obj\Debug\net6.0\HuaMoney.csproj.AssemblyReference.cache
+C:\Users\yixin\Desktop\HuaMoney\HuaMoney\obj\Debug\net6.0\HuaMoney.sourcelink.json
+C:\Users\yixin\Desktop\HuaMoney\HuaMoney\obj\Debug\net6.0\HuaMoney.csproj.CopyComplete
+C:\Users\yixin\Desktop\HuaMoney\HuaMoney\bin\Debug\net6.0\MySqlConnector.dll
+C:\Users\yixin\Desktop\HuaMoney\HuaMoney\bin\Debug\net6.0\Pomelo.EntityFrameworkCore.MySql.dll
