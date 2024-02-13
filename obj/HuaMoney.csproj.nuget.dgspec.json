@@ -1,25 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "/home/guti/Documents/Development/huamoney/HuaMoney.csproj": {}
+    "C:\\Users\\yixin\\Desktop\\HuaMoney\\HuaMoney\\HuaMoney.csproj": {}
   },
   "projects": {
-    "/home/guti/Documents/Development/huamoney/HuaMoney.csproj": {
+    "C:\\Users\\yixin\\Desktop\\HuaMoney\\HuaMoney\\HuaMoney.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/guti/Documents/Development/huamoney/HuaMoney.csproj",
+        "projectUniqueName": "C:\\Users\\yixin\\Desktop\\HuaMoney\\HuaMoney\\HuaMoney.csproj",
         "projectName": "HuaMoney",
-        "projectPath": "/home/guti/Documents/Development/huamoney/HuaMoney.csproj",
-        "packagesPath": "/home/guti/.nuget/packages/",
-        "outputPath": "/home/guti/Documents/Development/huamoney/obj/",
+        "projectPath": "C:\\Users\\yixin\\Desktop\\HuaMoney\\HuaMoney\\HuaMoney.csproj",
+        "packagesPath": "C:\\Users\\yixin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\yixin\\Desktop\\HuaMoney\\HuaMoney\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/home/guti/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\yixin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -32,6 +38,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -80,7 +91,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.418/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }
