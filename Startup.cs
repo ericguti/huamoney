@@ -1,4 +1,6 @@
-﻿using HuaMoney.Models;
+﻿using HuaMoney.Interfaces;
+using HuaMoney.Models;
+using HuaMoney.Services;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
@@ -35,7 +37,7 @@ namespace HuaMoney
             // Alternatively, use 'ServerVersion.AutoDetect(connectionString)'.
             // For common usages, see pull request #1233.
             var serverVersion = new MySqlServerVersion(new Version(8, 0, 34));
-
+            
             // Replace 'YourDbContext' with the name of your own DbContext derived class.
             services.AddDbContext<HuaMoneyContext>(
                 dbContextOptions => dbContextOptions
@@ -46,6 +48,9 @@ namespace HuaMoney
                     .EnableSensitiveDataLogging()
                     .EnableDetailedErrors()
             );
+
+            //Add Scopes
+            services.AddScoped<ITransactionService, TransactionService>();
         }
 
 
