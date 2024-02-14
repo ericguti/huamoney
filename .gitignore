@@ -6,6 +6,10 @@
 # env
 .env
 
+#obj
+bin/
+obj/
+
 # User-specific files
 *.rsuser
 *.suo
