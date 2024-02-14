@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HuaMoney")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+62d0d75178137266271aa4dfed5a5aff1c1695be")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eafa4867062d543e72475b93bf2328de12eb76e9")]
 [assembly: System.Reflection.AssemblyProductAttribute("HuaMoney")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HuaMoney")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
